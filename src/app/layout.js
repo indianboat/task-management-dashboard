@@ -1,7 +1,4 @@
 import './globals.css';
-import { Cairo } from 'next/font/google';
-
-const cairo = Cairo({ subsets: ['latin'], weight:["200", "300", "400", "500", "600", "700", "800", "900", "1000"] });
 
 export const metadata = {
   title: 'Next js Dashboard',
@@ -10,8 +7,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={cairo.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>{children}</body>
     </html>
   )
 }
